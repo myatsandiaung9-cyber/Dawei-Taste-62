@@ -1,0 +1,653 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: white;
+}
+/* For Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color:#fdf5e6;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #f49d07;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid #f49d07;
+}
+.nav-links a.active {
+    color: #f49d07;
+    border-bottom: 2px solid #f49d07;
+}
+.contact-btn{
+    padding: 10px 20px;
+    background-color: #f49d07;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar .logo {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e2723;
+}
+
+@media (max-width: 768px) {  
+   
+    .navbar {
+        display: flex;
+        flex-direction: row !important; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px !important; 
+    }
+    
+    .navbar .logo {
+        font-size: 14px; 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px; /* Link တစ်ခုနဲ့တစ်ခု ကြားအကွာအဝေး*/
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 12px; 
+    }
+
+    .nav-links a:hover {
+        padding: 4px 6px; /* Hover လုပ်ရင်လည်း ဘောင်တွေ အကြီးကြီးမဖြစ်အောင် ညှိမယ် */
+        border-radius: 10px;
+    }
+
+    .contact-btn {
+        padding: 6px 12px; 
+        font-size: 12px;   
+    }    
+}
+/* For Header */
+.hero {
+    background-color: #fdf5e6;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    margin-top: 50px;
+    max-width: 600px;
+    position: relative;
+    z-index: 3;
+}
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #3e2723;
+}
+.hero-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+.hero-btn{
+    background-color: #3e2723;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;    
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-btn:hover{
+    background-color: #f49d07;
+    color: #050505;
+}
+
+.hero-image img {
+    width:450px;
+    height:450px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3e2723;
+}
+.wave-container {
+    width: 100%;
+    line-height: 0;
+    margin-top: -120px; 
+    position: relative;
+    z-index: 1;
+}
+
+.wave-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@media (max-width: 768px) { 
+    
+    .hero {
+        padding: 20px !important; 
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 38px;
+    }
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+    }
+    .wave-container {
+        margin-top: -40px;
+    }
+}
+/* For Gallery Sections */
+.gallery-section {
+    padding:10px 50px 100px 100px;
+    background-color: white;
+    z-index: 2;
+    position: relative;
+}
+.gallery-section h2 {
+    font-family: bjeanmyeongjo;
+    font-size: 32px;
+    color: #3e2723;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 15px;
+    padding: 20px 100px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ဒီမှာ နေရာချထားပုံကို သတ်မှတ်ပါတယ် */
+.item1 { grid-column: span 2; grid-row: span 2; } /* ဘယ်ဘက်အကြီး */
+.item2 { grid-column: span 1; grid-row: span 1; }
+.item3 { grid-column: span 1; grid-row: span 1; }
+.item4 { grid-column: span 1; grid-row: span 1; } 
+.item5 { grid-column: span 1; grid-row: span 1; }
+.item6 { grid-column: span 1; grid-row: span 1; }
+.item7 { grid-column: span 1; grid-row: span 1; }
+.item8 { grid-column: span 2; grid-row: span 2; }
+.item9 { grid-column: span 1; grid-row: span 1; }
+.item10{ grid-column: span 1; grid-row: span 1; }
+.item12 { grid-column: span 2; grid-row: span 2; }
+.item13 { grid-column: span 2; grid-row: span 2; }
+@media (max-width: 768px) {
+    .gallery-section, .gallery-grid {
+        padding: 20px !important; 
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+    .gallery-item {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+    .item1, .item8 {
+        grid-column: span 2 !important;
+    }
+}
+
+/* For Menu */
+.decorated-title{
+    text-align: center;
+    font-size: 32px;
+    color: #3e2723;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.decorated-title::before,
+.decorated-title::after {
+    content: '';
+    flex: 1;
+    max-width: 80px;
+    height: 2px;
+    background-color: #f49d07;
+
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: #0b0b0b; 
+    color: rgb(253, 248, 248);
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3 ease;
+}
+.view-btn:hover{
+    background-color: #f49d07;
+    color: #0b0b0b;
+}
+@media (max-width: 768px) {
+    .decorated-title{
+        font-size: 22px;
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+    .decorated-title::before
+    .decorated-title::after{
+        max-width: 50px;
+    }
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap:30px !important;
+        padding: 20px !important;
+    }
+    .menu-card img{
+        height: 350px !important;
+    }
+    .menu-card h3{
+        font-size: 16px;
+        margin: 15px 0;
+    }
+    
+}
+/* Recipe Page */
+/* Container ချိန်ညှိခြင်း */
+.recipe-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.recipe-title {
+    font-family: 'Pyidaungsu', sans-serif;
+    font-size: 50px;           
+    font-weight: 800;          
+    color: #2d3436;            
+    text-align: center;
+    margin: 100px 0;
+    text-transform: capitalize;
+    letter-spacing: 2px;       
+    position: relative;
+}
+
+/* ခေါင်းစဉ်အောက်မှာ မျဉ်းလေးတစ်ခု ထည့်မယ် */
+.recipe-title::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 4px;
+    background: #e67e22;     
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+
+.recipe-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.recipe-intro {
+    margin: 20px 0;
+    padding: 25px;
+    color: #0f0f0f;
+    background: #ffffff; 
+    border-radius: 15px;
+    line-height: 1.8;
+    text-align: justify; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-left: 3px solid #f39c12;
+}
+
+/* Section Box ပုံစံများ */
+.recipe-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+}
+
+.section-title {
+    color: #d35400;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 5px;
+}
+
+/* List များကို သပ်ရပ်အောင်ပြုလုပ်ခြင်း */
+.ingredients-list, .steps-list {
+    padding-left: 20px;
+}
+
+.steps-list li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.steps-list h4 {
+    margin: 10px 0 5px 0;
+    color: #000000;
+    font-weight: bold;
+}
+.steps-list p{
+    margin-bottom: 10px;
+    color: #000;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Back Button Design */
+.back-button-container {
+    text-align: center; 
+    margin: 40px 0;    
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: hsl(33, 100%, 57%); 
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px; 
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease; 
+}
+
+.back-btn:hover {
+    background-color: #df7a06; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .recipe-title { 
+        font-size: 36px; 
+    }
+    .recipe-container { 
+        padding: 10px; 
+    }
+    .recipe-intro {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .recipe-section { 
+        padding: 15px; 
+    }
+    .back-btn{
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
+
+/* For About */
+
+.about-container {
+    max-width: 800; 
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+.about-header {
+    display: flex;
+    color: #46251b;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+     
+}
+    
+.about-header::before,
+.about-header::after {
+    content: '';
+    height: 2px;
+    width: 200px;
+    background-color: #f49d07;
+}
+
+.about-image {
+    display: block; 
+    margin: 0 auto; 
+    width: 100%;
+    max-width: 700px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+}
+.about-content p {
+    margin-top: 40px;
+    font-size: 18px;
+    background-color: #fff6de;
+    line-height: 1.9;
+    color: #555;
+    text-align: center;
+    margin: 60px 200px 0px 200px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive  */
+
+@media (max-width: 768px) {
+    
+    .about-container {
+        padding: 10px;
+    }
+
+    
+    .about-header::before,
+    .about-header::after {
+        width: 80px;
+    }
+
+    
+    .about-image {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .about-content p {
+        margin: 40px 15px 0px 15px; 
+        padding: 25px;            
+        font-size: 16px;         
+    }
+}
+
+
+/* For Contact */
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.contact-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fef4e4;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* ပုံထဲကလို အရိပ်လေးပါမယ် */
+}
+
+.contact-box h2 {
+    background-color: #faeacf;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; 
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6d493e; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #422218;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px;
+    }
+}
+
+/* For Footer */
+.footer {
+    background-color: #3e2723;
+    color: white;
+    padding: 50px 100px 20px 100px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    font-family: bjeanmyeongjo;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-logo { 
+    max-width: 300px; 
+}
+
+.footer-links ul { 
+    list-style: none; 
+}
+.footer-links a { 
+    color: #fdf5e6; 
+    text-decoration: none; 
+}
+
+.footer-bottom {
+    font-family: bjeanmyeongjo;
+    text-align: center;
+    border-top: 1px solid #6d493e;
+    padding-top: 20px;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px !important; 
+    }
+     .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-logo {
+        max-width: 100%;
+    }
+    .footer-links ul {
+        padding-left: 0;
+    }
+}
